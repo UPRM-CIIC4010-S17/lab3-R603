@@ -7,7 +7,7 @@ import java.awt.Rectangle;
 import javax.swing.JPanel;
  
 public class MyPanelClass extends JPanel {
-            /**
+			/**
 	 * 
 	 */
 	private static final long serialVersionUID = 7057541440811488699L;
@@ -30,48 +30,48 @@ public class MyPanelClass extends JPanel {
                         
                         //Draw top stripe
                         g.setColor(Color.RED);
-                        g.fillRect(x1, y1, width, 70);
+                        g.fillRect(x1, y1, width, 65);
                                        
                         //Draw bottom stripe
                         g.setColor(Color.RED);
-                        g.fillRect(x1, getHeight() - 70, width, 70);
+                        g.fillRect(x1, getHeight() - 65, width, 65);
                         
                         //Draw middle stripe
                         g.setColor(Color.RED);
-                        g.fillRect(x1, height/2 - 70/2, width, 70);
+                        g.fillRect(x1, height/2 - 65/2, width, 70);
                         
                         //Triangle
                         Polygon p = new Polygon();
-                        p.addPoint(x1 + 5, y1 + 25);
-                        p.addPoint(x1 + 20, y1 + 10);
-                        p.addPoint(x1 + 35, y1 + 25);
-                        p.addPoint(x1 + 25, y1 + 25);
-                        p.addPoint(x1 + 25, y1 + 45);
-                        p.addPoint(x1 + 15, y1 + 45);
-                        p.addPoint(x1 + 15, y1 + 25);
-                        g.setColor(Color.YELLOW);
+                        p.addPoint(x1, getHeight());//bottom vertex
+                        p.addPoint(x1 + 200, y1 + 175);
+                        p.addPoint(x1, y1);
+                        //p.addPoint(x1 + 25, y1 + 25);
+                        //p.addPoint(x1 + 25, y1 + 45);
+                        //p.addPoint(x1 + 15, y1 + 45);
+                        //p.addPoint(x1 + 15, y1 + 25);
+                        g.setColor(Color.BLUE);
                         g.fillPolygon(p);
 			
                         //Star
                         Polygon p2 = new Polygon();
                         //left
-                        p2.addPoint(x1 + 25, y1 + 73);
+                        p2.addPoint(x1 + 69, y1 + 163);//25 + 44
                         //top
-                        p2.addPoint(x1 + 41, y1 + 73);
-                        p2.addPoint(x1 + 47, y1 + 58);
-                        p2.addPoint(x1 + 53, y1 + 73);
+                        p2.addPoint(x1 + 85, y1 + 163);//41
+                        p2.addPoint(x1 + 91, y1 + 148);//47
+                        p2.addPoint(x1 + 97, y1 + 163);//53
                         //right
-                        p2.addPoint(x1 + 69, y1 + 73);
-                        p2.addPoint(x1 + 56, y1 + 83);
-                        p2.addPoint(x1 + 61, y1 + 98);
+                        p2.addPoint(x1 + 113, y1 + 163);//69
+                        p2.addPoint(x1 + 100, y1 + 173);//56
+                        p2.addPoint(x1 + 105, y1 + 188);//61
                         //bottom
-                        p2.addPoint(x1 + 47, y1 + 88);
+                        p2.addPoint(x1 + 91, y1 + 178);//47
                         //left
-                        p2.addPoint(x1 + 34, y1 + 98);
-                        p2.addPoint(x1 + 38, y1 + 83);
-                        g.setColor(Color.YELLOW);
-                        System.out.println(p2.getBounds());
+                        p2.addPoint(x1 + 78, y1 + 188);//34
+                        p2.addPoint(x1 + 82, y1 + 173);//38
+                        g.setColor(Color.WHITE);
                         g.fillPolygon(p2);
+                        System.out.println(p2.getBounds());
                         
                         
                       //Draw red line
